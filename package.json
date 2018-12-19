@@ -19,8 +19,6 @@
     "configstore": "^4.0.0",
     "get-repository-url": "^2.0.0",
     "inquirer": "^6.2.1",
-    "inquirer-autocomplete-prompt": "^1.0.1",
-    "inquirer-command-prompt": "0.0.8",
     "inquirer-fuzzy-path": "^1.0.0"
   },
   "bin": {
