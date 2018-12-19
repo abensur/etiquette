@@ -1,12 +1,12 @@
 {
   "name": "etiquette",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "etiquette is the command-line tool that stars your dependencies",
-	"main": "index.js",
-	"repository": {
-		"type" : "git",
-		"url" : "https://github.com/abensur/etiquette.git"
-	},
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abensur/etiquette.git"
+  },
   "scripts": {
     "start": "node index.js"
   },
