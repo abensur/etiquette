@@ -1,15 +1,18 @@
-const fs 		  = require('fs');
-const octokit     = require('@octokit/rest')();
-const Configstore = require('configstore');
-const CLI         = require('clui');
-const repoUrl 	  = require('get-repository-url');
-const Spinner     = CLI.Spinner;
-const pkg         = require('../package.json');
-const chalk       = require('chalk');
-const inquirer    = require('./inquirer');
-const conf 		  = new Configstore(`${pkg.name}-${pkg.version}`);
-const note     	  = pkg.description;
-const authOpt	  = { scopes: ['repo'], note };
+import * as fs from 'fs';
+import * as pkg from '../package.json';
+import CLI from 'clui';
+import chalk from 'chalk';
+import repoUrl from 'get-repository-url';
+import inquirer from './inquirer';
+import getOctokit from '@octokit/rest';
+import Configstore from 'configstore';
+
+const Spinner = CLI.Spinner;
+const conf = new Configstore(`${pkg.name}-${pkg.version}`);
+const note = pkg.description;
+const authOpt = { scopes: ['repo'], note };
+
+const octokit = getOctokit();
 
 const gitAuth = async () =>
 	await octokit.authorization.createAuthorization(authOpt);
@@ -20,7 +23,7 @@ const gitAuthWithToken = async (twoFactorCode) =>
 		headers: { "x-github-otp": twoFactorCode }
 	});
 
-module.exports = {
+export default {
 	flattenDeps: async () => {
 		const keys = obj => Object.keys(obj);
 		const { path } = await inquirer.askPackageJSONPath();
@@ -80,7 +83,7 @@ module.exports = {
 
 		repoStatus.start();
 
-		for await (dependency of dependencies) {
+		for await (let dependency of dependencies) {
 			await repoUrl(dependency).then(url => {
 				if (url) repositories.push(url);
 			});
@@ -94,7 +97,7 @@ module.exports = {
 			.map(it => ({ owner: it[0], repo: it[1] }));
 
 		starStatus.start();
-		for await (repository of ownerAndRepoList) {
+		for await (let repository of ownerAndRepoList) {
 			const { owner, repo } = repository;
 			await octokit.activity.starRepo({ owner, repo }).catch(error => {
 				throw error;
@@ -103,6 +106,5 @@ module.exports = {
 		starStatus.stop();
 		return;
 	},
-
 };
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const chalk 		= require("chalk");
-const github  		= require('./lib/github');
+import chalk from 'chalk';
+import github from './github';
 
 const init = () => {
 	console.log(chalk.green("etiquette"));
