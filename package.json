@@ -1,0 +1,22 @@
+{
+  "name": "etiquette",
+  "version": "1.0.0",
+  "description": "etiquette is the command-line tool that stars your dependencies",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Rafael Abensur <rafael@abensur.me>",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/rest": "^16.2.0",
+    "chalk": "^2.4.1",
+    "clui": "^0.3.6",
+    "configstore": "^4.0.0",
+    "get-repository-url": "^2.0.0",
+    "inquirer": "^6.2.1"
+  },
+  "bin": {
+    "etiquette": "./index.js"
+  }
+}
