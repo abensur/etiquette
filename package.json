@@ -1,6 +1,6 @@
 {
   "name": "etiquette",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "etiquette is the command-line tool that stars your dependencies",
   "main": "index.js",
   "repository": {
@@ -23,9 +23,9 @@
   },
   "bin": {
     "etiquette": "./index.js"
-	},
-	"engineStrict" : true,
-	"engines": {
+  },
+  "engineStrict": true,
+  "engines": {
     "node": ">= 10.0.0"
-	}
+  }
 }
