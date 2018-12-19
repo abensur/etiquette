@@ -1,6 +1,6 @@
 {
   "name": "etiquette",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "etiquette is the command-line tool that stars your dependencies",
   "main": "index.js",
   "repository": {
