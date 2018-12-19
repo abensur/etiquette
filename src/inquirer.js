@@ -1,7 +1,9 @@
-const inquirer 	= require('inquirer')
-inquirer.registerPrompt('fuzzypath', require('inquirer-fuzzy-path'));
+import inquirer from 'inquirer';
+import fuzzypath from 'inquirer-fuzzy-path';
 
-module.exports = {
+inquirer.registerPrompt('fuzzypath', fuzzypath);
+
+export default {
 	askGithubCredentials: () => {
     const questions = [{
 			name: 'username',
