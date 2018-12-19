@@ -22,11 +22,12 @@ const run = async () => {
 
 	const deps = await github.flattenDeps();
 
-	if (!deps.length) {
-		return console.log(chalk.red('No dependencies found'));
-	}
+	// if (!deps.length) {
+	// 	return console.log(chalk.red('No dependencies found'));
+	// }
 
-	await github.starRepos(deps);
+	// await github.starRepos(deps);
+
 	success();
 };
 
