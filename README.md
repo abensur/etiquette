@@ -10,3 +10,9 @@ npm install -g etiquette
 ```bash
 $ etiquette
 ```
+
+## Special thanks
+
+[Giovanny Piovesan](https://github.com/wolfgio)
+
+[Vitor Luiz Cavalcanti](https://github.com/VitorLuizC)
