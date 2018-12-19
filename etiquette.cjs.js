@@ -101,7 +101,7 @@ function _objectSpread(target) {
 }
 
 var name = "etiquette";
-var version = "2.3.0";
+var version = "2.3.1";
 var description = "etiquette is the command-line tool that stars your dependencies";
 
 inquirer.registerPrompt('fuzzypath', fuzzypath);
