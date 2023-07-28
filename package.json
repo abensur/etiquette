@@ -2,18 +2,15 @@
   "name": "etiquette",
   "version": "3.0.1",
   "description": "etiquette is to stars your dependencies",
+  "main": "etiquette.mjs",
   "bin": {
-    "etiquette": "etiquette.js"
+    "etiquette": "etiquette.mjs"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/abensur/etiquette.git"
   },
   "type": "module",
-  "scripts": {
-      "build": "tsc"
-  },
-  "main": "etiquette.js",
   "keywords": [
     "dependencies",
     "github",
@@ -25,8 +22,5 @@
   "dependencies": {
     "get-repository-url": "^2.0.0",
     "zx": "^7.2.3"
-  },
-  "devDependencies": {
-    "typescript": "^5.1.6"
   }
 }
