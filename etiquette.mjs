@@ -1,4 +1,4 @@
-#! /usr/bin/env zx
+#! /usr/bin/env -S zx --install
 
 import { $, fs, echo, spinner, chalk } from 'zx'
 
