@@ -1,6 +1,6 @@
 {
   "name": "etiquette",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "etiquette is to stars your dependencies",
   "bin": {
     "etiquette": "etiquette.js"
