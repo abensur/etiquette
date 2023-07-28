@@ -53,10 +53,12 @@ async function fetchRepositories(flatdeps) {
     `Getting the url for ${flatdeps.length} repositor${ flatdeps.length > 1 ? 'ies' : 'y' }.`,
     async () => {
       repositories = await Promise.all(flatdeps.map(async (dep) => {
-        const resp = await repoUrl(dep)
-        if (resp !== 'https://github.com/null') {
-          return resp
-        }
+        try {
+          const resp = await repoUrl(dep)
+          if (resp !== 'https://github.com/null') {
+            return resp
+          }
+        } catch {}
         failed.push(dep)
         return null
       }))
@@ -87,16 +89,16 @@ async function starRepo(repo) {
         -H "X-GitHub-Api-Version: 2022-11-28" \
         /user/starred/${owner}/${name}`
     )
-    echo`${chalk.green('✓')} - ${chalk.bold(owner)}/${chalk.bold(name)}`
+    echo`${chalk.yellowBright('★')} ${chalk.bold(owner)}/${chalk.bold(name)}`
     await new Promise(resolve => setTimeout(resolve, 1000)); 
   } catch (e) {
-    echo`${chalk.red('✗')} - ${chalk.bold(owner)}/${chalk.bold(name)}`
+    echo`${chalk.red('☆')} ${chalk.bold(owner)}/${chalk.bold(name)}`
   }
 }
 
 function echoFailedRepos(failed) {
   if (failed.length) {
-    failed.forEach(it => echo`${chalk.red('✗')} - ${chalk.bold(it)}`)
+    failed.forEach(it => echo`${chalk.red('⚠')} ${chalk.bold(it)}`)
   }
 }
 
