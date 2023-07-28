@@ -2,6 +2,9 @@
   "name": "etiquette",
   "version": "2.0.0",
   "description": "etiquette is to stars your dependencies",
+  "scripts": {
+    "run": "zx etiquette.mjs"
+  },    
   "bin": {
     "etiquette": "./etiquette.mjs"
   },
@@ -10,10 +13,18 @@
     "url": "https://github.com/abensur/etiquette.git"
   },
   "type": "module",
-  "keywords": ["dependencies", "github", "star", "etiquette"],
+  "keywords": [
+    "dependencies",
+    "github",
+    "star",
+    "etiquette"
+  ],
   "author": "Rafael Abensur",
   "license": "MIT",
   "dependencies": {
     "get-repository-url": "^2.0.0"
+  },
+  "devDependencies": {
+    "zx": "^7.2.3"
   }
 }

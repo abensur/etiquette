@@ -1,5 +1,5 @@
 #!/usr/bin/env zx
-import repoUrl from 'get-repository-url';
+const repoUrl = require('get-repository-url');
 
 $.verbose = false;
 
