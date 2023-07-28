@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "etiquette is to stars your dependencies",
   "bin": {
-    "etiquette": "node ./etiquette.js"
+    "etiquette": "etiquette.js"
   },
   "repository": {
     "type": "git",
