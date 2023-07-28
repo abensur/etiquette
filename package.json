@@ -1,36 +1,19 @@
 {
   "name": "etiquette",
-  "version": "2.3.1",
-  "description": "etiquette is the command-line tool that stars your dependencies",
-  "main": "etiquette.cjs.js",
+  "version": "2.0.0",
+  "description": "etiquette is to stars your dependencies",
+  "bin": {
+    "etiquette": "./etiquette.mjs"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/abensur/etiquette.git"
   },
-  "scripts": {
-    "start": "node etiquette.cjs.js",
-    "build": "bili src/index.js --format cjs -o ./",
-    "prepare": "npm run build"
-  },
-  "author": "Rafael Abensur <rafael@abensur.me>",
-  "license": "ISC",
+  "type": "module",
+  "keywords": ["dependencies", "github", "star", "etiquette"],
+  "author": "Rafael Abensur",
+  "license": "MIT",
   "dependencies": {
-    "@octokit/rest": "^16.2.0",
-    "chalk": "^2.4.1",
-    "clui": "^0.3.6",
-    "configstore": "^4.0.0",
-    "get-repository-url": "^2.0.0",
-    "inquirer": "^6.2.1",
-    "inquirer-fuzzy-path": "^1.0.0"
-  },
-  "bin": {
-    "etiquette": "./etiquette.cjs.js"
-  },
-  "engineStrict": true,
-  "engines": {
-    "node": ">= 6.0.0"
-  },
-  "devDependencies": {
-    "bili": "^3.4.2"
+    "get-repository-url": "^2.0.0"
   }
 }

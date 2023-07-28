@@ -1,18 +1,12 @@
-# etiquette
+# Etiquette
 Star your dependencies!
 
-## Installing
+## Dependencies
+- [Github's CLI](https://cli.github.com/)
+- [Node.js](https://nodejs.org/en)
+
+## Usage
 ```bash
-npm install -g etiquette
+gh auth login
+npx etiquette
 ```
-
-## Running
-```bash
-$ etiquette
-```
-
-## Special thanks
-
-[Giovanny Piovesan](https://github.com/wolfgio)
-
-[Vitor Luiz Cavalcanti](https://github.com/VitorLuizC)
