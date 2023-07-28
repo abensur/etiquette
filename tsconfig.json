@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "strict": true
+  },
+  "include": ["etiquette.ts", "types.d.ts"],
+  "exclude": ["node_modules", "etiquette.js"]
+}
