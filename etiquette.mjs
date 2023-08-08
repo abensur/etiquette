@@ -20,7 +20,7 @@ try {
 
   echoRepoCount(uniqueRepos);
   
-  for await (let repo of uniqueRepos) {
+  for (let repo of uniqueRepos) {
     await starRepo(repo);
   }
 
